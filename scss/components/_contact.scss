@@ -1,0 +1,99 @@
+@use "../abstracts" as *;
+
+.contact {
+  @include flexColumnCenter;
+  @include backgroundAndFontColor($black, $creamishWhite);
+
+  height: 35.2rem;
+  min-width: 30rem;
+  margin: 1.6rem 1.6rem 1.6rem 1.6rem;
+  border-radius: 1rem;
+
+  .content-container {
+    .secondary-header {
+      @include text($secondaryHeaderFontSize, 2.6rem, 600);
+      margin-top: 4.9rem;
+      margin-bottom: 2.4rem;
+    }
+
+    .txt {
+      @include text($defaultFontSize, 2.625rem, 500);
+      margin: 0 2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      margin-top: 2.9rem;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+    .contact {
+        .content-container {
+            .txt {
+                margin: 3rem 0 4rem 0;
+                padding: 0 5%;
+            }}}
+}
+
+@media (min-width: 750px) {
+  .contact {
+    width: auto;
+    height: 35.2rem;
+    margin: 0 5%;
+    justify-content: flex-start;
+
+    .content-container {
+      .secondary-header {
+        font-size: $secondaryHeaderFontSizeS;
+        margin-top: 6rem;
+        margin-bottom: 3.5rem;
+      }
+      .txt {
+        padding: 0 0;
+        font-size: $fontSizeM;
+        margin: 0 12%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
+      .btn {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    width: 111rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 32rem;
+    margin: 0 auto;
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      height: 14.9rem;
+      justify-content: space-between;
+
+      .secondary-header,
+      .txt {
+        margin: 0 0;
+        text-align: left;
+        width: 54rem;
+      }
+      .secondary-header {
+        font-size: $secondaryHeaderFontSizeMContact;
+      }
+      .txt {
+        line-height: 2.8rem;
+      }
+      .btn {
+        margin-right: 3rem;
+        margin-left: 5rem;
+      }
+    }
+  }
+}

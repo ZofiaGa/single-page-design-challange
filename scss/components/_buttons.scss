@@ -1,0 +1,87 @@
+@use "../abstracts" as *;
+
+// GENERAL
+
+.btn {
+  text-decoration: none;
+  padding: 1.25rem 2.5rem;
+  border-radius: 10rem;
+  font-size: $btnFontSize;
+  font-weight: 500;
+  width: 17.6rem;
+  transition: all 0.2s;
+
+  &__background-black {
+    @include backgroundAndFontColor($black, $creamishWhite);
+    // background-color: $black;
+    // color: $creamishWhite;
+
+    &:hover {
+        background-color: $blackBackgroundHoverColor;
+    }
+  }
+
+  &__pink-orange {
+    @include backgroundAndFontColor($btnLightColor, $creamishWhite);
+    // background-color: $btnLightColor;
+    // color: $pureWhite;
+    &:hover {
+        background-color: $lightBackgroundHoverColor;
+    }
+  }
+}
+
+// SLIDER BUTTONS
+
+.left-right-btn {
+  text-align: center;
+  margin: 0 auto 0 auto;
+  margin-top: 2.5rem;
+  width: 14.4rem;
+  height: 7rem;
+  position: relative;
+
+  // border: solid black;
+
+  .slider--btn {
+    border: none;
+    border-radius: 100rem;
+    width: 6.4rem;
+    height: 6.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &--left {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &--right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .btn {
+    font-size: $btnFontSizeM;
+    width: 22.8rem;
+    height: 5.6rem;
+    padding: 1.7rem 0;
+    text-align: center;
+  }
+
+  .left-right-btn {
+    text-align: center;
+    margin-top: 5.6rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .btn {
+    font-weight: 600;
+  }
+}

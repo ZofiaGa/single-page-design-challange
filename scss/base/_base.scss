@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+*,
+*::after,  /* after element  */
+*::before   /* and before element have to be also included here so the global values are also applicable for them  */ {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* So the box-sizing property by itself is not inherited, but by setting the box-sizing property on each and every element on the entire page to inherit, it'll automatically inherit */
+}
+
+html {
+  font-size: 62.5%; /* 100 /16*/ // this defines what 1rem is (1rem = 10px)
+  font-family: $mainFontFamily;
+}
+
+body {
+  box-sizing: border-box; /* note that the box-sizing: inherit is set up in the html element*/
+  background-color: $creamishWhite;
+}
+
+
+
+@media (min-width: 1440px) {
+    body {
+        width: 144rem;
+        margin: 0 auto;
+        // border: solid black;
+    }
+}

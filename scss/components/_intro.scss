@@ -1,0 +1,58 @@
+@use "../abstracts" as *;
+
+.section__intro {
+    
+  @include flexColumnCenter;
+
+  .heading-primary {
+
+    @include text($mainHeaderFontSize, 4.5rem, 800);
+
+    padding: 0.5rem 0rem;
+    margin: 0rem 10%;
+    margin-top: 2.5rem;
+  }
+
+  .txt {
+    @include text($defaultFontSize, 2.625rem, 600);
+    // max-width: 34rem;
+    color: $txtColor;
+    font-weight: 500;
+    padding: 1rem 0rem;
+    margin: 0rem 11%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .section__intro {
+    .heading-primary {
+      font-size: $mainHeaderFontSizeM;
+      margin-top: 6rem;
+      font-weight: 700;
+    }
+    .txt {
+        font-size: $fontSizeM;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+    .section__intro {
+        margin-bottom: 4.5rem;
+      .heading-primary {
+        font-size: $mainHeaderFontSizeL;
+        margin-top: 7rem;
+        font-weight: 700;
+      }
+      .txt {
+          font-size: $fontSizeM;
+          margin: 0rem 36rem;
+          margin-top: 2.5rem;
+
+
+      }
+    }
+  }

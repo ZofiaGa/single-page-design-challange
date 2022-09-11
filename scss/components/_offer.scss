@@ -1,0 +1,187 @@
+@use "../abstracts" as *;
+
+.offer {
+  ul {
+    min-width: 34.3rem;
+    list-style-type: none;
+    margin: 1rem 1rem;
+    padding: 0 0;
+    color: $pureWhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 2.4rem;
+
+    li {
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .pattern {
+        width: 42%;
+        // height: 30%;
+        padding: 2.3rem 2.3rem 1rem 0;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__design {
+    background-color: $graphicDesignBackgroundColor;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+  }
+
+  &__ui-ux {
+    background-color: $uiAndUxBackgroundColor;
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+  }
+
+  &__apps {
+    background-color: $appsBackgroundColor;
+    grid-column: span 1 / -1;
+    grid-row: 3 / span 1;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+  }
+
+  &__ui-ux,
+  &__apps {
+    .pattern {
+      width: 53% !important;
+    }
+  }
+
+  &__photography {
+    background-color: $photographyBackgroundColor;
+    grid-column: 1 / -1;
+    grid-row: 5 / span 1;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+    .pattern {
+      width: 52% !important;
+    }
+  }
+
+  &__illustrations {
+    background-color: $illustrationBackgroundColor;
+    // width: 21.4375rem;
+    grid-column: 1 / -1;
+    grid-row: 4 / span 1;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+  }
+
+  &__motion-graphics {
+    background-color: $motionGraphicsBackgroundColor;
+    // width: 21.4375rem;
+    grid-column: 1 / -1;
+    grid-row: span 1 / -1;
+    font-size: $offerTxtSize;
+    font-weight: $offerTxtWeight;
+  }
+
+  &__span {
+    padding: 2.5rem;
+    padding-top: 3;
+  }
+}
+
+@media (min-width: 550px) {
+  .offer {
+    ul {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__design {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    &__ui-ux {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &__apps {
+      grid-column: 4 / -1;
+      grid-row: 1 / span 1;
+    }
+
+    &__illustrations {
+      grid-column: 3 / -1;
+      grid-row: 2 / span 1;
+    }
+
+    &__photography {
+      grid-column: 1 / span 2;
+      grid-row: 3 / -1;
+    }
+
+    &__motion-graphics {
+      grid-column: 3 / -1;
+      grid-row: 3 / -1;
+    }
+  }
+}
+
+@media (min-width: 750px) {
+  .offer {
+    ul {
+      margin: 1rem 4rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .offer {
+    margin: 0 auto;
+    max-width: 111rem;
+
+    ul {
+      margin: 1rem 0rem;
+      height: 37rem;
+      max-width: 111rem;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__design {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+    }
+
+    &__ui-ux {
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &__apps {
+      grid-column: 4 / span 1;
+      grid-row: 1 / span 1;
+    }
+
+    &__illustrations {
+      grid-column: 3 / span 2;
+      grid-row: 2 / span 1;
+    }
+
+    &__photography {
+      grid-column: 5 / -1;
+      grid-row: 1 / span 1;
+    }
+
+    &__motion-graphics {
+      grid-column: 5 / -1;
+      grid-row: 2 / -1;
+    }
+  }
+}
